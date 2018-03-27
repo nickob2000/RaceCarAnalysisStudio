@@ -8,9 +8,9 @@ import javafx.fxml.FXML;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.XYChart.Series;
 import javafx.scene.layout.GridPane;
-import rcas.model.MagicFormulaTireModel;
+import rcas.model.tire.MagicFormulaTireModel;
 import rcas.model.RaceCar;
-import rcas.model.TireModel;
+import rcas.model.tire.TireModel;
 import rcas.util.CorneringAnalyserUtil;
 
 public class RCASMainViewController {
