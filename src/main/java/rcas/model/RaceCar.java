@@ -4,6 +4,8 @@ import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
+import rcas.model.MagicFormulaTireModel;
+import rcas.model.TireModel;
 
 /**
  * Represents a Race Car.

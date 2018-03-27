@@ -14,7 +14,7 @@
 	maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
 	minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" vgap="15.0"
 	xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
-	fx:controller="rcas.controller.RCASMainViewController" stylesheets="@RCASStyle.css">
+	fx:controller="rcas.controller.RCASMainViewController" stylesheets="@../css/RCASStyle.css">
 	<padding>
 		<Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
 	</padding>
