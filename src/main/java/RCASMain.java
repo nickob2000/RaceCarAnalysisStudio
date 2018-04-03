@@ -1,3 +1,4 @@
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 import javafx.application.Application;
@@ -12,6 +13,7 @@ public class RCASMain extends Application {
 	public void start(Stage primaryStage) throws Exception {
 		FXMLLoader fxmlLoader = new FXMLLoader();
 		fxmlLoader.setLocation(RCASMain.class.getResource("RCASMainView.fxml"));
+		//ResourceBundle resourceBundle = ResourceBundle.getBundle("RCASResources", Locale.getDefault());
 		ResourceBundle resourceBundle = ResourceBundle.getBundle("RCASResources");
 		fxmlLoader.setResources(resourceBundle);
 

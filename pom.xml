@@ -22,20 +22,24 @@
                             <goal>copy-resources</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>/target/classes/resources</outputDirectory>
+                            <outputDirectory>target/classes/</outputDirectory>
                             <resources>
                                 <resource>
-                                    <directory>fxml</directory>
+                                    <directory>target/classes/fxml/</directory>
                                     <includes>
                                         <include>RCASMainView.fxml</include>
                                     </includes>
                                     <filtering>true</filtering>
                                 </resource>
                                 <resource>
-                                    <directory>properties</directory>
+                                    <directory>target/classes/css</directory>
                                     <includes>
-                                        <include>RCASResources.properties</include>
+                                        <include>RCASStyle.css</include>
                                     </includes>
+                                    <filtering>true</filtering>
+                                </resource>
+                                <resource>
+                                    <directory>target/classes/properties</directory>
                                     <filtering>true</filtering>
                                 </resource>
                             </resources>
