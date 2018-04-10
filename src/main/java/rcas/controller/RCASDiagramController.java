@@ -13,7 +13,7 @@ import rcas.model.RaceCar;
 import rcas.model.TireModel;
 import rcas.util.CorneringAnalyserUtil;
 
-public class RCASMainViewController {
+public class RCASDiagramController {
 
 	@FXML
 	private GridPane mainPane;

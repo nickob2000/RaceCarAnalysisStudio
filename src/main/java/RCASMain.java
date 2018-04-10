@@ -12,9 +12,10 @@ public class RCASMain extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		FXMLLoader fxmlLoader = new FXMLLoader();
-		fxmlLoader.setLocation(RCASMain.class.getResource("RCASMainView.fxml"));
-		//ResourceBundle resourceBundle = ResourceBundle.getBundle("RCASResources", Locale.getDefault());
-		ResourceBundle resourceBundle = ResourceBundle.getBundle("RCASResources");
+		fxmlLoader.setLocation(RCASMain.class.getResource("RCASDiagram.fxml"));
+
+		ResourceBundle resourceBundle = ResourceBundle.getBundle("RCASResources", Locale.getDefault());
+		//ResourceBundle resourceBundle = ResourceBundle.getBundle("RCASResources");
 		fxmlLoader.setResources(resourceBundle);
 
 		GridPane mainPane = (GridPane) fxmlLoader.load();

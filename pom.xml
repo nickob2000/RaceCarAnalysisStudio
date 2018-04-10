@@ -26,16 +26,10 @@
                             <resources>
                                 <resource>
                                     <directory>target/classes/fxml/</directory>
-                                    <includes>
-                                        <include>RCASMainView.fxml</include>
-                                    </includes>
                                     <filtering>true</filtering>
                                 </resource>
                                 <resource>
                                     <directory>target/classes/css</directory>
-                                    <includes>
-                                        <include>RCASStyle.css</include>
-                                    </includes>
                                     <filtering>true</filtering>
                                 </resource>
                                 <resource>
