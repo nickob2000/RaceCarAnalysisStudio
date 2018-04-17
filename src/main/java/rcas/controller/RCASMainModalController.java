@@ -18,7 +18,9 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import rcas.model.RaceCar;
 
 
@@ -109,9 +111,10 @@ public class RCASMainModalController {
     private void plusButtonClick(MouseEvent event) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/RCASNewTire.fxml"));
-            Parent root1 = fxmlLoader.load();
+            Parent root = fxmlLoader.load();
             Stage stage = new Stage();
-            stage.setScene(new Scene(root1));
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setScene(new Scene(root));
             stage.show();
         } catch(Exception e) {
             e.printStackTrace();
