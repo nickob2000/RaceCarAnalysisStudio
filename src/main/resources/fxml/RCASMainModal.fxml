@@ -122,7 +122,7 @@
             <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <ImageView fitHeight="182.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4">
                <image>
-                  <Image url="@../../../../../../../../Desktop/a30e6aa1-0826-4924-ba14-27e0f145e43a.png" />
+                  <Image url="@../images/racecar.png" />
                </image>
             </ImageView>
          </children>
