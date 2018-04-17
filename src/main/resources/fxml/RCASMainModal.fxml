@@ -18,118 +18,118 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
-   <top>
-      <MenuBar prefWidth="623.0" BorderPane.alignment="CENTER">
-        <menus>
-          <Menu mnemonicParsing="false" text="File">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
-            </items>
-          </Menu>
-            <Menu mnemonicParsing="false" text="View">
-              <items>
-                <MenuItem mnemonicParsing="false" text="Action 1" />
-              </items>
-            </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Help">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
-   </top>
-   <left>
-      <VBox prefHeight="375.0" prefWidth="216.0" BorderPane.alignment="CENTER">
-         <children>
-            <HBox prefHeight="32.0" prefWidth="216.0">
-               <children>
-                  <TextField prefHeight="31.0" prefWidth="139.0" promptText="Filter" />
-                  <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="80.0" text="Add" />
-               </children>
-            </HBox>
-            <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="217.0" text="Racecar 1" />
-            <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="224.0" text="Racecar 2" />
-            <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="217.0" text="Racecar 3" />
-            <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="217.0" text="Racecar 4" />
-            <VBox prefHeight="396.0" prefWidth="216.0" />
-            <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="218.0" text="Diagram" />
-         </children>
-      </VBox>
-   </left>
-   <center>
-      <GridPane prefHeight="417.0" prefWidth="472.0" BorderPane.alignment="CENTER">
-        <columnConstraints>
-          <ColumnConstraints />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
-         <children>
-            <TextField promptText="kg" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <TextField layoutX="66.0" layoutY="32.0" promptText="kg" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-            <TextField layoutX="66.0" layoutY="32.0" promptText="kg" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-            <TextField layoutX="253.0" layoutY="32.0" promptText="kg" GridPane.columnIndex="4" GridPane.rowIndex="6" />
-            <ComboBox layoutX="162.0" layoutY="52.0" prefHeight="31.0" prefWidth="129.0" promptText="Default" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="7" />
-            <ComboBox layoutX="162.0" layoutY="393.0" prefHeight="31.0" prefWidth="136.0" promptText="Default" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="70.0" text="+" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-            <Button layoutX="210.0" layoutY="52.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="70.0" text="+" GridPane.columnIndex="4" GridPane.rowIndex="7" />
-            <Label prefHeight="21.0" prefWidth="73.0" text="Fronttrack:" GridPane.columnIndex="6" GridPane.columnSpan="2" GridPane.rowIndex="2" />
-            <Label layoutX="402.0" layoutY="171.0" text="Reartrack:" GridPane.columnIndex="6" GridPane.columnSpan="2" GridPane.rowIndex="3" />
-            <Label layoutX="402.0" layoutY="158.0" text="Wheelbase:" GridPane.columnIndex="6" GridPane.columnSpan="2" GridPane.rowIndex="4" />
-            <Label text="Cogheight:" GridPane.columnIndex="6" GridPane.columnSpan="2" GridPane.rowIndex="5" />
-            <Label text="Frontrolldist:" GridPane.columnIndex="6" GridPane.columnSpan="2" GridPane.rowIndex="6" />
-            <Label text="Name:" GridPane.columnIndex="1">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <TextField promptText="Race car" GridPane.columnIndex="2" GridPane.columnSpan="2" />
-            <Label text="m" GridPane.columnIndex="9" GridPane.rowIndex="2" />
-            <Label text="m" GridPane.columnIndex="9" GridPane.rowIndex="3" />
-            <Label text="m" GridPane.columnIndex="9" GridPane.rowIndex="4" />
-            <Label text="m" GridPane.columnIndex="9" GridPane.rowIndex="5" />
-            <TextField promptText="1.6" GridPane.columnIndex="8" GridPane.rowIndex="2" />
-            <TextField promptText="1.6" GridPane.columnIndex="8" GridPane.rowIndex="3" />
-            <TextField promptText="2.6" GridPane.columnIndex="8" GridPane.rowIndex="4" />
-            <TextField promptText="0.5" GridPane.columnIndex="8" GridPane.rowIndex="5" />
-            <TextField promptText="0.5" GridPane.columnIndex="8" GridPane.rowIndex="6" />
-            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-            <ImageView fitHeight="150.0" fitWidth="152.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <ImageView fitHeight="182.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4">
-               <image>
-                  <Image url="@../images/racecar.png" />
-               </image>
-            </ImageView>
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="185.0" text="Details" GridPane.columnIndex="7" GridPane.columnSpan="2" GridPane.rowIndex="7" />
-         </children>
-         <padding>
-            <Insets left="10.0" />
-         </padding>
-      </GridPane>
-   </center>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@RCASStyle.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rcas.controller.RCASMainModalController">
+    <top>
+        <MenuBar prefWidth="623.0" BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="View">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Action 1" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <left>
+        <VBox prefHeight="375.0" prefWidth="216.0" BorderPane.alignment="CENTER">
+            <children>
+                <HBox prefHeight="32.0" prefWidth="216.0">
+                    <children>
+                        <TextField prefHeight="31.0" prefWidth="139.0" promptText="Name" />
+                        <Button mnemonicParsing="false" onAction="#add" prefHeight="31.0" prefWidth="80.0" text="Add" />
+                    </children>
+                </HBox>
+                <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="217.0" text="Racecar 1" />
+                <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="224.0" text="Racecar 2" />
+                <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="217.0" text="Racecar 3" />
+                <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="217.0" text="Racecar 4" />
+                <VBox prefHeight="396.0" prefWidth="216.0" />
+                <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="218.0" text="Diagram" />
+            </children>
+        </VBox>
+    </left>
+    <center>
+        <GridPane prefHeight="417.0" prefWidth="472.0" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <TextField promptText="kg" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <TextField layoutX="66.0" layoutY="32.0" promptText="kg" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                <TextField layoutX="66.0" layoutY="32.0" promptText="kg" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                <TextField layoutX="253.0" layoutY="32.0" promptText="kg" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                <ComboBox layoutX="162.0" layoutY="52.0" prefHeight="31.0" prefWidth="129.0" promptText="Default" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="7" />
+                <ComboBox layoutX="162.0" layoutY="393.0" prefHeight="31.0" prefWidth="136.0" promptText="Default" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="70.0" text="+" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                <Button layoutX="210.0" layoutY="52.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="70.0" text="+" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+                <Label prefHeight="21.0" prefWidth="73.0" text="Fronttrack:" GridPane.columnIndex="6" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                <Label layoutX="402.0" layoutY="171.0" text="Reartrack:" GridPane.columnIndex="6" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                <Label layoutX="402.0" layoutY="158.0" text="Wheelbase:" GridPane.columnIndex="6" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+                <Label text="Cogheight:" GridPane.columnIndex="6" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+                <Label text="Frontrolldist:" GridPane.columnIndex="6" GridPane.columnSpan="2" GridPane.rowIndex="6" />
+                <Label text="Name:" GridPane.columnIndex="1">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <TextField promptText="Race car" GridPane.columnIndex="2" GridPane.columnSpan="2" />
+                <Label text="m" GridPane.columnIndex="9" GridPane.rowIndex="2" />
+                <Label text="m" GridPane.columnIndex="9" GridPane.rowIndex="3" />
+                <Label text="m" GridPane.columnIndex="9" GridPane.rowIndex="4" />
+                <Label text="m" GridPane.columnIndex="9" GridPane.rowIndex="5" />
+                <TextField promptText="1.6" GridPane.columnIndex="8" GridPane.rowIndex="2" />
+                <TextField promptText="1.6" GridPane.columnIndex="8" GridPane.rowIndex="3" />
+                <TextField promptText="2.6" GridPane.columnIndex="8" GridPane.rowIndex="4" />
+                <TextField promptText="0.5" GridPane.columnIndex="8" GridPane.rowIndex="5" />
+                <TextField promptText="0.5" GridPane.columnIndex="8" GridPane.rowIndex="6" />
+                <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                <ImageView fitHeight="150.0" fitWidth="152.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <ImageView fitHeight="182.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                    <image>
+                        <Image url="@racecar.png" />
+                    </image>
+                </ImageView>
+                <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="185.0" text="Details" GridPane.columnIndex="7" GridPane.columnSpan="2" GridPane.rowIndex="7" />
+            </children>
+            <padding>
+                <Insets left="10.0" />
+            </padding>
+        </GridPane>
+    </center>
 </BorderPane>

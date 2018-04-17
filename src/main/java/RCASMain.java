@@ -4,6 +4,7 @@ import java.util.ResourceBundle;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
@@ -12,13 +13,13 @@ public class RCASMain extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		FXMLLoader fxmlLoader = new FXMLLoader();
-		fxmlLoader.setLocation(RCASMain.class.getResource("RCASDiagram.fxml"));
+		fxmlLoader.setLocation(RCASMain.class.getResource("RCASMainModal.fxml"));
 
 		ResourceBundle resourceBundle = ResourceBundle.getBundle("RCASResources", Locale.getDefault());
 		//ResourceBundle resourceBundle = ResourceBundle.getBundle("RCASResources");
 		fxmlLoader.setResources(resourceBundle);
 
-		GridPane mainPane = (GridPane) fxmlLoader.load();
+		BorderPane mainPane = (BorderPane) fxmlLoader.load();
 		Scene mainScene = new Scene(mainPane, 800, 600);
 		primaryStage.centerOnScreen();
 		primaryStage.setTitle(resourceBundle.getString("applicationTitle"));

@@ -36,6 +36,10 @@
                                     <directory>target/classes/properties</directory>
                                     <filtering>true</filtering>
                                 </resource>
+                                <resource>
+                                    <directory>target/classes/images</directory>
+                                    <filtering>true</filtering>
+                                </resource>
                             </resources>
                         </configuration>
                     </execution>
