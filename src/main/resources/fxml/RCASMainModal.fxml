@@ -18,7 +18,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
    <top>
       <MenuBar prefWidth="623.0" BorderPane.alignment="CENTER">
         <menus>
@@ -125,6 +125,7 @@
                   <Image url="@../images/racecar.png" />
                </image>
             </ImageView>
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="185.0" text="Details" GridPane.columnIndex="7" GridPane.columnSpan="2" GridPane.rowIndex="7" />
          </children>
          <padding>
             <Insets left="10.0" />
