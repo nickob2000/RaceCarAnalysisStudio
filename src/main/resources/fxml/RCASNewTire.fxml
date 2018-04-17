@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -22,6 +23,8 @@
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+
   </rowConstraints>
    <children>
       <Label prefHeight="21.0" prefWidth="128.0" text="New Tire">
@@ -35,18 +38,16 @@
       <Label text="SlipAngleCoefficientE:" GridPane.rowIndex="4" />
       <Label layoutX="30.0" layoutY="257.0" text="LoadCoefficientKA:" GridPane.rowIndex="5" />
       <Label layoutX="30.0" layoutY="257.0" text="LoadCoefficientKB:" GridPane.rowIndex="6" />
-      <Label text="°" GridPane.columnIndex="2" GridPane.rowIndex="1" />
       <Label text="°" GridPane.columnIndex="2" GridPane.rowIndex="2" />
       <Label text="°" GridPane.columnIndex="2" GridPane.rowIndex="3" />
       <Label text="°" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-      <Label text="°" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-      <Label text="°" GridPane.columnIndex="2" GridPane.rowIndex="6" />
       <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
       <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
       <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
       <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
       <TextField GridPane.columnIndex="1" GridPane.rowIndex="5" />
       <TextField GridPane.columnIndex="1" GridPane.rowIndex="6" />
+      <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="200.0" text="Create" GridPane.rowIndex="7" />
    </children>
    <opaqueInsets>
       <Insets />
