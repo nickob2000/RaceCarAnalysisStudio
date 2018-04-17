@@ -342,7 +342,7 @@ public class RaceCar {
 		this.rearAxleTireModel = rearAxleTireModel;
 	}
 
-	@Override
+	/*@Override
 	public String toString() {
 		return String.format(
 				"Object=\t%s\n" + "Name=\t%s\n" + "Front Track=\t%.2f\n" + "Rear Track=\t%.2f\n" + "Wheelbase=\t%.2f\n"
@@ -353,5 +353,10 @@ public class RaceCar {
 				this.getWheelbase(), this.getCogHeight(), this.getFrontRollDist(), this.getCornerWeightFL(),
 				this.getCornerWeightFR(), this.getCornerWeightRL(), this.getCornerWeightRR(),
 				this.getFrontAxleTireModel().toString(), this.getRearAxleTireModel().toString());
+	}*/
+
+	@Override
+	public String toString() {
+		return this.getName();
 	}
 }
