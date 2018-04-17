@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="194.0" minWidth="10.0" prefWidth="194.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="343.0" minWidth="10.0" prefWidth="186.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="324.0" minWidth="10.0" prefWidth="198.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label prefHeight="21.0" prefWidth="128.0" text="New Tire">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label text="Name:" GridPane.rowIndex="1" />
+      <Label text="SlipAngleCoefficientC:" GridPane.rowIndex="2" />
+      <Label text="SlipAngleCoefficientB:" GridPane.rowIndex="3" />
+      <Label text="SlipAngleCoefficientE:" GridPane.rowIndex="4" />
+      <Label layoutX="30.0" layoutY="257.0" text="LoadCoefficientKA:" GridPane.rowIndex="5" />
+      <Label layoutX="30.0" layoutY="257.0" text="LoadCoefficientKB:" GridPane.rowIndex="6" />
+      <Label text="°" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      <Label text="°" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <Label text="°" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+      <Label text="°" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+      <Label text="°" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+      <Label text="°" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+      <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <TextField GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <TextField GridPane.columnIndex="1" GridPane.rowIndex="6" />
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <padding>
+      <Insets left="20.0" />
+   </padding>
+</GridPane>
