@@ -129,8 +129,7 @@ public class MagicFormulaTireModel implements TireModel {
 
 	@Override
 	public String toString() {
-		return String.format("%s: \"%s\" (C=%.2f, B=%.2f, E=%.2f, KA=%.2f, KB=%.6f)", this.getClass().toString(),
-				this.getName(), slipAngleCoefficientC.get(), slipAngleCoefficientB.get(), slipAngleCoefficientE.get(),
-				loadCoefficientKA.get(), loadCoefficientKB.get());
+		// return name for the combobox
+		return name.get();
 	}
 }

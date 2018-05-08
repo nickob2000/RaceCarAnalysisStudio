@@ -1,11 +1,6 @@
 package rcas.model;
 
-import javafx.beans.property.DoubleProperty;
-import javafx.beans.property.SimpleDoubleProperty;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
-import rcas.model.MagicFormulaTireModel;
-import rcas.model.TireModel;
+import javafx.beans.property.*;
 
 /**
  * Represents a Race Car.
@@ -52,10 +47,10 @@ public class RaceCar {
 	private SimpleDoubleProperty cornerWeightRR;
 
 	// front axle tire model of the car.
-	private TireModel frontAxleTireModel;
+	private ObjectProperty<TireModel> frontAxleTireModel;
 
 	// rear axle tire model of the car.
-	private TireModel rearAxleTireModel;
+	private ObjectProperty<TireModel> rearAxleTireModel;
 
 	/**
 	 * Creates a new Race Car Object with the given corner weights in kg and the
@@ -84,8 +79,8 @@ public class RaceCar {
 		this.cornerWeightRR = new SimpleDoubleProperty(cornerWeightRR);
 
 		// initialize tire models with a default tire model.
-		this.frontAxleTireModel = new MagicFormulaTireModel();
-		this.rearAxleTireModel = new MagicFormulaTireModel();
+		this.frontAxleTireModel = new SimpleObjectProperty<>(new MagicFormulaTireModel());
+		this.rearAxleTireModel = new SimpleObjectProperty<>(new MagicFormulaTireModel());
 	}
 
 	/**
@@ -316,6 +311,10 @@ public class RaceCar {
 	 * @return the frontAxleTireModel
 	 */
 	public TireModel getFrontAxleTireModel() {
+		return frontAxleTireModel.get();
+	}
+
+	public ObjectProperty<TireModel> frontAxleTireModelProperty() {
 		return frontAxleTireModel;
 	}
 
@@ -324,13 +323,17 @@ public class RaceCar {
 	 *            the frontAxleTireModel to set
 	 */
 	public void setFrontAxleTireModel(TireModel frontAxleTireModel) {
-		this.frontAxleTireModel = frontAxleTireModel;
+		this.frontAxleTireModel.set(frontAxleTireModel);
 	}
 
 	/**
 	 * @return the rearAxleTireModel
 	 */
 	public TireModel getRearAxleTireModel() {
+		return rearAxleTireModel.get();
+	}
+
+	public ObjectProperty<TireModel> rearAxleTireModelProperty() {
 		return rearAxleTireModel;
 	}
 
@@ -339,7 +342,7 @@ public class RaceCar {
 	 *            the rearAxleTireModel to set
 	 */
 	public void setRearAxleTireModel(TireModel rearAxleTireModel) {
-		this.rearAxleTireModel = rearAxleTireModel;
+		this.rearAxleTireModel.set(rearAxleTireModel);
 	}
 
 	/*@Override

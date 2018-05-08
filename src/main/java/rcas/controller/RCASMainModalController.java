@@ -3,20 +3,19 @@ package rcas.controller;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.chart.XYChart;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.ListView;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.util.StringConverter;
 import rcas.model.MagicFormulaTireModel;
 import rcas.model.RaceCar;
 import rcas.model.TireModel;
@@ -28,6 +27,12 @@ public class RCASMainModalController {
 
     @FXML
     private ListView<RaceCar> carView;
+
+    @FXML
+    private ComboBox<TireModel> frontTire;
+
+    @FXML
+    private ComboBox<TireModel> backTire;
 
     @FXML
     private TextField addName;
@@ -69,6 +74,9 @@ public class RCASMainModalController {
 
     @FXML
     public void initialize() {
+        initDefaultRacecars();
+
+        carView.setItems(data);
         carView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 
         carView.setOnMouseClicked(click -> {
@@ -90,6 +98,25 @@ public class RCASMainModalController {
         });
     }
 
+    private void initDefaultRacecars() {
+        RaceCar myRaceCar_1 = new RaceCar(420, 420, 370, 370);
+        TireModel myTireModel_1 = new MagicFormulaTireModel();
+        myRaceCar_1.setFrontRollDist(0.55);
+        myRaceCar_1.setFrontAxleTireModel(myTireModel_1);
+        myRaceCar_1.setRearAxleTireModel(myTireModel_1);
+        myRaceCar_1.setName("Car STD (blue)");
+
+        RaceCar myRaceCar_2 = new RaceCar(420, 420, 370, 370);
+        TireModel myTireModel_2_Fr = new MagicFormulaTireModel(1.3, 15.2, -1.6, 1.6, 0.000075);
+        TireModel myTireModel_2_Rr = new MagicFormulaTireModel(1.3, 15.2, -1.6, 1.8, 0.000075);
+        myRaceCar_2.setFrontRollDist(0.55);
+        myRaceCar_2.setFrontAxleTireModel(myTireModel_2_Fr);
+        myRaceCar_2.setRearAxleTireModel(myTireModel_2_Rr);
+        myRaceCar_2.setName("Car MOD (red)");
+
+        data.addAll(myRaceCar_1, myRaceCar_2);
+    }
+
     @FXML
     private void add(ActionEvent event) {
         addNewRaceCar();
@@ -101,7 +128,6 @@ public class RCASMainModalController {
             RaceCar raceCar = new RaceCar(0, 0, 0, 0);
             raceCar.setName(addName.getText());
             data.add(raceCar);
-            carView.setItems(data);
         }
         addName.clear();
     }
@@ -128,6 +154,9 @@ public class RCASMainModalController {
     }
 
     public void carBindings() {
+        backTire.valueProperty().bind(selectedCar.rearAxleTireModelProperty());
+        frontTire.valueProperty().bind(selectedCar.frontAxleTireModelProperty());
+
         detailName.textProperty().bind(selectedCar.nameProperty());
         leftFrontTier.textProperty().bind(selectedCar.cornerWeightFLProperty().asString());
         rightFrontTier.textProperty().bind(selectedCar.cornerWeightFRProperty().asString());
