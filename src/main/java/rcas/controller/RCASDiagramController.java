@@ -15,6 +15,8 @@ import rcas.util.CorneringAnalyserUtil;
 
 public class RCASDiagramController {
 
+	private static final CorneringAnalyserUtil CORNERING_UTIL = new CorneringAnalyserUtil();
+
 	@FXML
 	private GridPane mainPane;
 	@FXML
@@ -78,5 +80,11 @@ public class RCASDiagramController {
 				util.getMMMControlValue(raceCar, 0.0, 0.0, 10.0), util.getMMMControlValue(raceCar, -5.0, 20.0, 30.0),
 				util.getMMMStabilityValue(raceCar, 0.0, 0.0, 1.0),
 				util.getMMMStabilityValue(raceCar, 20.0, -5.0, -4.0)));
+	}
+
+	public void useRaceCar(RaceCar raceCar) {
+		ObservableList<Series<Number, Number>> dataList = CORNERING_UTIL.generateMMMChartData(raceCar);
+		mainChart.getData().addAll(dataList);
+		this.setSeriesStyle(dataList, ".chart-series-line", "-fx-stroke: red; -fx-stroke-width: 1px;");
 	}
 }

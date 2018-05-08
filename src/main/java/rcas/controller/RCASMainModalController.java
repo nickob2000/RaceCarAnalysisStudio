@@ -1,12 +1,6 @@
 package rcas.controller;
 
-import com.sun.javafx.binding.BidirectionalBinding;
-import javafx.beans.binding.Bindings;
-import javafx.beans.property.StringProperty;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
-import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -14,15 +8,21 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.chart.XYChart;
 import javafx.scene.control.ListView;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
+import rcas.model.MagicFormulaTireModel;
 import rcas.model.RaceCar;
+import rcas.model.TireModel;
 
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 public class RCASMainModalController {
 
@@ -71,26 +71,60 @@ public class RCASMainModalController {
     public void initialize() {
         carView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 
-        carView.setOnMouseClicked(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent click) {
-                if (click.getClickCount() == 2) {
-                    //Use ListView's getSelected Item
+        carView.setOnMouseClicked(click -> {
+            if (click.getClickCount() == 2) {
+                //Use ListView's getSelected Item
+                boolean hasSelectedItem = carView.getSelectionModel().getSelectedItem() != null;
+                if (hasSelectedItem) {
                     selectedCar = carView.getSelectionModel()
                             .getSelectedItem();
                     carBindings();
                 }
             }
         });
+
+        addName.setOnKeyPressed(ke -> {
+            if (ke.getCode() == KeyCode.ENTER) {
+                addNewRaceCar();
+            }
+        });
     }
 
     @FXML
     private void add(ActionEvent event) {
-        RaceCar raceCar = new RaceCar(0, 0, 0, 0);
-        raceCar.setName(addName.getText());
-        data.add(raceCar);
-        carView.setItems(data);
+        addNewRaceCar();
+    }
+
+    private void addNewRaceCar() {
+        String carName = addName.getText();
+        if (!carName.trim().isEmpty() && carName.trim().length() <= 20) {
+            RaceCar raceCar = new RaceCar(0, 0, 0, 0);
+            raceCar.setName(addName.getText());
+            data.add(raceCar);
+            carView.setItems(data);
+        }
         addName.clear();
+    }
+
+    @FXML
+    private void openDiagram(ActionEvent event) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/RCASDiagram.fxml"));
+            ResourceBundle resourceBundle = ResourceBundle.getBundle("RCASResources", Locale.getDefault());
+            fxmlLoader.setResources(resourceBundle);
+
+            Parent root = fxmlLoader.load();
+
+            RCASDiagramController diagramController = fxmlLoader.getController();
+            diagramController.useRaceCar(selectedCar);
+
+            Stage stage = new Stage();
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void carBindings() {
@@ -118,5 +152,6 @@ public class RCASMainModalController {
             stage.show();
         } catch(Exception e) {
             e.printStackTrace();
-        }    }
+        }
+    }
 }

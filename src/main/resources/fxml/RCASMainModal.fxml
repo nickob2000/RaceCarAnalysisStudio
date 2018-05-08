@@ -57,7 +57,7 @@
                 </HBox>
                 <ListView fx:id="carView" prefHeight="517.0" prefWidth="216.0">
                 </ListView>
-                <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="218.0" text="Diagram" />
+                <Button mnemonicParsing="false" onAction="#openDiagram" prefHeight="31.0" prefWidth="218.0" text="Diagram" />
             </children>
         </VBox>
     </left>
